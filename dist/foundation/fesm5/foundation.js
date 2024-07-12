@@ -3,6 +3,9 @@ import { ɵɵdefineInjectable, ɵsetClassMetadata, Injectable, ɵɵdefineCompone
 var FoundationService = /** @class */ (function () {
     function FoundationService() {
     }
+    FoundationService.prototype.hello = function () {
+        alert('Hello from subpackage');
+    };
     FoundationService.ɵfac = function FoundationService_Factory(t) { return new (t || FoundationService)(); };
     FoundationService.ɵprov = ɵɵdefineInjectable({ token: FoundationService, factory: FoundationService.ɵfac, providedIn: 'root' });
     return FoundationService;
@@ -10,7 +13,7 @@ var FoundationService = /** @class */ (function () {
 /*@__PURE__*/ (function () { ɵsetClassMetadata(FoundationService, [{
         type: Injectable,
         args: [{
-                providedIn: 'root'
+                providedIn: 'root',
             }]
     }], function () { return []; }, null); })();
 

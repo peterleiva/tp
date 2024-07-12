@@ -2,13 +2,16 @@ import { ɵɵdefineInjectable, ɵsetClassMetadata, Injectable, ɵɵdefineCompone
 
 class FoundationService {
     constructor() { }
+    hello() {
+        alert('Hello from subpackage');
+    }
 }
 FoundationService.ɵfac = function FoundationService_Factory(t) { return new (t || FoundationService)(); };
 FoundationService.ɵprov = ɵɵdefineInjectable({ token: FoundationService, factory: FoundationService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(FoundationService, [{
         type: Injectable,
         args: [{
-                providedIn: 'root'
+                providedIn: 'root',
             }]
     }], function () { return []; }, null); })();
 
